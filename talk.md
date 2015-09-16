@@ -61,6 +61,23 @@ ood cartoon
 
 
 
+-----
+
+## Inheritance
+
+### Is it a good idea?
+
+------
+
+## Inheritance
+
+Django Class-Based Views
+
+![Django CBV UpdateView](../img/UpdateView-inheritance.svg)
+
+
+
+
 
 -----
 
