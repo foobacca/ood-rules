@@ -9,8 +9,10 @@ the get out of jail free card
 ## Example Time
 
 show tomsplanner screenshot
-show tomsplanner json export
-show detail of time period
+
+show tomsplanner json export in sublime text - big and long
+
+show detail of time period - startmoment and finishmoment
 
 So I have the time period, the type and the row (= person)
 
@@ -28,18 +30,22 @@ Here we have split Activity into it's own shallow class heirarchy.
 - open/closed
     - open for extension, closed for modification
     - if you don't have to edit the working code, it won't break!
+
 - Django CBV
     - update view has 9 parent/mixin classes! [update view on ccbv](https://ccbv.co.uk/projects/Django/1.8/django.views.generic.edit/UpdateView/)
+    - shallow/narrow heirarchy
+
 - `super()` vs `extra_init()`
-
-- shallow/narrow heirarchy
-
-
-
+    - hands up who has copied a call with `super()` and forgotten to edit the
+      class, leading to some calls being missed out
 
 ## Example time 2
 
 half days refactor
+
+less ifs (apart from `__lte__()` )
+
+end up with reusable classes
 
 
 
@@ -62,7 +68,7 @@ Code to show:
 
 - refactor the utils class
 
-Refactoring: "make the change easy (that might be hard) then make the easy change" Martin Fowler
+Refactoring: "make the change easy (that might be hard) then make the easy change" Kent Beck
 
 ## END OF TALK
 

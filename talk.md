@@ -3,15 +3,7 @@ OOD Rules
 
 ![odd](../img/planet-of-teh-ood.png)
 
-----------
-
-Hamish Downer
-@hgd20
-github.com/foobacca
-
-----------
-
-ood cartoon
+Hamish Downer / @hgd20 / github.com/foobacca
 
 -----
 
@@ -58,14 +50,35 @@ ood cartoon
 
 ## Example Time
 
+![tomsplanner screenshot](../img/tomsplanner-screenshot.png)
 
+-----
 
+## Example Time
+
+![tomsplanner json screenshot](../img/tomsplanner-json-screenshot.png)
+
+-----
+
+## Example Time
+
+    {
+        "duration": 8,
+        "durationtype": "day",
+        "finishmoment": "09/22/2015 17:00:00 GMT",
+        "id": "grid_0_33",
+        "kids": [],
+        "label": "Dalek",
+        "nature": "period",
+        "startmoment": "09/17/2015 09:00:00 GMT",
+        "type": 26
+    },
 
 -----
 
 ## Inheritance
 
-### Is it a good idea?
+Is it a good idea?
 
 ------
 
@@ -75,11 +88,36 @@ Django Class-Based Views
 
 ![Django CBV UpdateView](../img/UpdateView-inheritance.svg)
 
+-----------
 
+## Open Closed
 
+* **Open** for extension
+* **Closed** for modification
 
+-----------
+
+## super() vs extra_init()
+
+![wrong parent](../img/wrong-parent.jpg)
+
+----------
+
+![make the change easy](../img/make-the-change-easy.png)
 
 -----
+
+![pasta ood](../img/pasta-ood.jpg)
+
+---------
+
+## Example 2
+
+---------
+
+![ood tea cosy](../img/ood-tea-cosy.jpg)
+
+---------
 
 ## The Rules
 
@@ -93,10 +131,14 @@ Django Class-Based Views
 
 -----
 
-![may the oods be ever in your favour](../img/oods-in-your-favour.jpg)
+## Practical Object Oriented Design in Ruby (POODR)
+
+Sandi Metz
+
+![POODR Cover](../img/poodr.jpeg)
 
 -----
 
-## github.com/foobacca/ood-rules-talk
+![may the oods be ever in your favour](../img/oods-in-your-favour.jpg)
 
-Sandi Metz, POODR
+github.com/foobacca/ood-rules-talk
