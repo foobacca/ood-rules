@@ -1,30 +1,46 @@
+:title: OOD Rules
+:data-transition-duration: 1500
+:css: hovercraft.css
+
+----
+
 OOD Rules
 =========
 
-![odd](../img/planet-of-teh-ood.png)
+.. image:: img/planet-of-teh-ood.png
 
 Hamish Downer / @hgd20 / github.com/foobacca
 
 -----
 
-## The Rules
+The Rules
+---------
 
 -----
 
-## The Rules
+The Rules
+---------
+
+.. code:: python
 
     assert len(class) <= 100
 
 -----
 
-## The Rules
+The Rules
+---------
+
+.. code:: python
 
     assert len(class) <= 100
     assert len(method) <= 5
 
 -----
 
-## The Rules
+The Rules
+---------
+
+.. code:: python
 
     assert len(class) <= 100
     assert len(method) <= 5
@@ -32,11 +48,14 @@ Hamish Downer / @hgd20 / github.com/foobacca
 
 -----
 
-![free the ood](../img/free-the-ood.jpg)
+.. image:: img/free-the-ood.jpg
 
 -----
 
-## The Rules
+The Rules
+---------
+
+.. code:: python
 
     assert len(class) <= 100
     assert len(method) <= 5
@@ -48,19 +67,27 @@ Hamish Downer / @hgd20 / github.com/foobacca
 
 -----
 
-## Example Time
+Example Time
+------------
 
-![tomsplanner screenshot](../img/tomsplanner-screenshot.png)
-
------
-
-## Example Time
-
-![tomsplanner json screenshot](../img/tomsplanner-json-screenshot.png)
+.. image:: img/tomsplanner-screenshot.png
+   :height: 600px
+   :width: 800px
 
 -----
 
-## Example Time
+Example Time
+------------
+
+.. image:: img/tomsplanner-json-screenshot.png
+   :height: 600px
+
+-----
+
+Example Time
+------------
+
+.. code:: json
 
     {
         "duration": 8,
@@ -76,50 +103,66 @@ Hamish Downer / @hgd20 / github.com/foobacca
 
 -----
 
-## Inheritance
+Inheritance
+-----------
 
 Is it a good idea?
 
 ------
 
-## Inheritance
+Inheritance
+-----------
 
 Django Class-Based Views
 
-![Django CBV UpdateView](../img/UpdateView-inheritance.svg)
+.. image:: img/UpdateView-inheritance.svg
 
 -----------
 
-## Open Closed
+Open Closed
+-----------
 
 * **Open** for extension
 * **Closed** for modification
 
 -----------
 
-## super() vs extra_init()
+super() vs extra_init()
+-----------------------
 
-![wrong parent](../img/wrong-parent.jpg)
+.. code:: python
+
+    class PeriodActivity(Activity):
+        def __init__(self, **kwargs):
+            super(SymbolActivity, self).__init__(**kwargs)
+
+--------
+
+.. image:: img/wrong-parent.jpg
 
 ----------
 
-![make the change easy](../img/make-the-change-easy.png)
+.. image:: img/make-the-change-easy.png
 
 -----
 
-![pasta ood](../img/pasta-ood.jpg)
+.. image:: img/pasta-ood.jpg
 
 ---------
 
-## Example 2
+Example 2
+---------
 
 ---------
 
-![ood tea cosy](../img/ood-tea-cosy.jpg)
+.. image:: img/ood-tea-cosy.jpg
 
 ---------
 
-## The Rules
+The Rules
+---------
+
+.. code:: python
 
     assert len(class) <= 100
     assert len(method) <= 5
@@ -131,14 +174,15 @@ Django Class-Based Views
 
 -----
 
-## Practical Object Oriented Design in Ruby
+Practical Object Oriented Design in Ruby
+----------------------------------------
 
 Sandi Metz
 
-![POODR Cover](../img/poodr.jpeg)
+.. image:: img/poodr.jpeg
 
 -----
 
-![may the oods be ever in your favour](../img/oods-in-your-favour.jpg)
+.. image:: img/oods-in-your-favour.jpg
 
 github.com/foobacca/ood-rules-talk
