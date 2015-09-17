@@ -131,7 +131,7 @@ Django Class-Based Views
 
 -----
 
-## Practical Object Oriented Design in Ruby (POODR)
+## Practical Object Oriented Design in Ruby
 
 Sandi Metz
 
