@@ -1,0 +1,11 @@
+body {
+	font-family: "Ubuntu light", sans-serif;
+}
+
+h1 {
+	font-size: 3.5em;
+}
+
+pre.code {
+	font-size: 1.8em;
+}

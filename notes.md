@@ -31,27 +31,26 @@ Here we have split Activity into it's own shallow class heirarchy.
 
 #### inheritance
 
-- open/closed
-    - open for extension, closed for modification
-    - if you don't have to edit the working code, it won't break!
-
 - Django CBV
     - update view has 9 parent/mixin classes! [update view on ccbv](https://ccbv.co.uk/projects/Django/1.8/django.views.generic.edit/UpdateView/)
     - full heirarchy? https://i.imgur.com/uuS3Zy5.png
     - be clear this is ancestry, not the complete map
     - shallow/narrow heirarchy
 
-- `super()` vs `extra_init()`
-    - hands up who has copied a call with `super()` and forgotten to edit the
-      class, leading to some calls being missed out
-    - add code example of `super()` - Activity without `extra_init()`
-    - better example if `Activity.__init__()` actually did something itself!
-    - add "the wrong parent" to the slide, make it a second slide
-    - doesn't work so well with even 2 levels of parents ...
+- open/closed
+    - open for extension, closed for modification
+    - if you don't have to edit the working code, it won't break!
+    - `super()` vs `extra_init()`
+        - hands up who has copied a call with `super()` and forgotten to edit the
+          class, leading to some calls being missed out
+        - add code example of `super()` - Activity without `extra_init()`
+        - better example if `Activity.__init__()` actually did something itself!
+        - add "the wrong parent" to the slide, make it a second slide
+        - doesn't work so well with even 2 levels of parents ...
 
 ## Example time 2
 
-half days refactor
+halfdays refactor
 
 less ifs (apart from `__lte__()` )
 

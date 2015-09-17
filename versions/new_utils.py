@@ -39,16 +39,30 @@ class HalfDay(object):
     def __eq__(self, other):
         return self.day == other.day and self.am_pm == other.am_pm
 
-    def __lte__(self, other):
-        if self.day < other.day:
-            return True
-        elif self.day > other.day:
-            return False
-        # from here on, the days are equal
-        elif self.am_pm == other.am_pm or self.am and other.pm:
-            return True
-        else:
-            return False
+    def __ne__(self, other):
+        return not self == other
+
+    def __lt__(self, other):
+        return (
+            self.day < other.day or (
+                self.day == other.day and
+                self.am and other.pm
+            )
+        )
+
+    def __gt__(self, other):
+        return (
+            self.day > other.day or (
+                self.day == other.day and
+                self.pm and other.am
+            )
+        )
+
+    def __ge__(self, other):
+        return not self < other
+
+    def __le__(self, other):
+        return not self > other
 
 
 class HalfDayIterator(object):
