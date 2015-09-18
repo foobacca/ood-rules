@@ -356,6 +356,9 @@ super() vs extra_init()
             # ...
             self.extra_init(**kwargs)
 
+        def extra_init(self, **kwargs):
+            pass
+
     class PeriodActivity(Activity):
         def extra_init(self, **kwargs):
             # ...
@@ -449,12 +452,16 @@ Example 2
 
 .. code:: python
 
-    class HalfDayIterator(object):
+    class HalfDayRange(object):
 
-        def from_start_date(self, date_time, weekday):
+        def __init__(self, start, end):
+            self.start_half_day = self.from_start_date(start)
+            self.end_half_day = self.from_end_date(end)
+
+        def from_start_date(self, date_time):
             am_pm = 'am' if date_time.hour < 12 else 'pm'
             halfday = HalfDay(date_time.date(), am_pm)
-            if weekday and not halfday.is_weekday():
+            if not halfday.is_weekday():
                 halfday = halfday.increment_weekday()
             return halfday
 
@@ -462,12 +469,9 @@ Example 2
             am_pm = 'am' if date_time.hour < 14 else 'pm'
             return HalfDay(date_time.date(), am_pm)
 
-        def from_start_end(self, start, end, weekday=False):
-            return (self.from_start_date(start, weekday), self.from_end_date(end))
-
-        def xhalfdays(self, start, end):
-            half_day, end_half_day = self.from_start_end(start, end, weekday=True)
-            while half_day <= end_half_day:
+        def xhalfdays(self):
+            half_day = self.start_half_day
+            while half_day <= self.end_half_day:
                 yield unicode(half_day)
                 half_day = half_day.increment_weekday()
 

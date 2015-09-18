@@ -65,12 +65,16 @@ class HalfDay(object):
         return not self > other
 
 
-class HalfDayIterator(object):
+class HalfDayRange(object):
 
-    def from_start_date(self, date_time, weekday):
+    def __init__(self, start, end):
+        self.start_half_day = self.from_start_date(start)
+        self.end_half_day = self.from_end_date(end)
+
+    def from_start_date(self, date_time):
         am_pm = 'am' if date_time.hour < 12 else 'pm'
         halfday = HalfDay(date_time.date(), am_pm)
-        if weekday and not halfday.is_weekday():
+        if not halfday.is_weekday():
             halfday = halfday.increment_weekday()
         return halfday
 
@@ -78,16 +82,19 @@ class HalfDayIterator(object):
         am_pm = 'am' if date_time.hour < 14 else 'pm'
         return HalfDay(date_time.date(), am_pm)
 
-    def from_start_end(self, start, end, weekday=False):
-        return (self.from_start_date(start, weekday), self.from_end_date(end))
-
-    def xhalfdays(self, start, end):
-        half_day, end_half_day = self.from_start_end(start, end, weekday=True)
-        while half_day <= end_half_day:
+    def xhalfdays(self):
+        half_day = self.start_half_day
+        while half_day <= self.end_half_day:
             yield unicode(half_day)
             half_day = half_day.increment_weekday()
 
-    def xhalfdays_for_day(self, day):
+
+class SingleDayRange(object):
+
+    def __init__(self, day):
+        self.day = day
+
+    def xhalfdays(self):
         day = day.date()
         yield unicode(HalfDay(day, HalfDay.AM))
         yield unicode(HalfDay(day, HalfDay.PM))
