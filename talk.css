@@ -1,11 +1,10 @@
-body {
-	font-family: "Ubuntu light", sans-serif;
-}
+body { font-family: "Ubuntu light", sans-serif; }
 
-h1 {
-	font-size: 3.5em;
-}
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.2em; }
 
-pre.code {
-	font-size: 1.8em;
-}
+p, li { font-size: 1.8em; }
+
+.large-code pre.code { font-size: 2.5em; }
+
+pre.code { font-size: 1.8em; }

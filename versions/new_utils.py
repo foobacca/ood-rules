@@ -67,19 +67,22 @@ class HalfDay(object):
 
 class HalfDayIterator(object):
 
-    def from_start_date(self, date_time):
+    def from_start_date(self, date_time, weekday):
         am_pm = 'am' if date_time.hour < 12 else 'pm'
-        return HalfDay(date_time.date(), am_pm)
+        halfday = HalfDay(date_time.date(), am_pm)
+        if weekday and not halfday.is_weekday():
+            halfday = halfday.increment_weekday()
+        return halfday
 
     def from_end_date(self, date_time):
         am_pm = 'am' if date_time.hour < 14 else 'pm'
         return HalfDay(date_time.date(), am_pm)
 
-    def from_start_end(self, start, end):
-        return (self.from_start_date(start), self.from_end_date(end))
+    def from_start_end(self, start, end, weekday=False):
+        return (self.from_start_date(start, weekday), self.from_end_date(end))
 
     def xhalfdays(self, start, end):
-        half_day, end_half_day = self.from_start_end(start, end)
+        half_day, end_half_day = self.from_start_end(start, end, weekday=True)
         while half_day <= end_half_day:
             yield unicode(half_day)
             half_day = half_day.increment_weekday()
