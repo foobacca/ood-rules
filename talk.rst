@@ -4,6 +4,9 @@
 
 ----
 
+.. role:: github
+.. role:: twitter
+
 :id: title-slide
 
 OOD Rules
@@ -14,7 +17,7 @@ OOD = Object Oriented Design
 .. image:: img/planet-of-teh-ood.png
    :height: 450px
 
-Hamish Downer / @hgd20 / github.com/foobacca / aptivate.org
+Hamish Downer / :twitter:`hgd20` / :github:`foobacca` / aptivate.org
 
 -----
 
@@ -506,4 +509,4 @@ sandimetz.com
 .. image:: img/poodr.jpeg
    :height: 450px
 
-Hamish Downer / @hgd20 / github.com/foobacca / aptivate.org
+Hamish Downer / :twitter:`hgd20` / :github:`foobacca` / aptivate.org
