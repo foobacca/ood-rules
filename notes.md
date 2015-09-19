@@ -1,9 +1,3 @@
-TODO: ? squint example 2 before and after
-
-TODO: run through for timing
-TODO: title slide twitter, github icons - check font size on 1 line
-TODO: check the projector screen size, connection ...
-
 ## Intro
 
 Hello, me
@@ -44,6 +38,8 @@ show tomsplanner json export - big and long and nested
 show detail of time period - startmoment and finishmoment
 
 So I have the time period, the type and the row (= person)
+
+- talk about data structure I'm aiming for
 
 ### versions/1/
 
@@ -99,6 +95,7 @@ Then you get into trouble as you create huge heirarchies and some people run awa
 ## Example time 2
 
 * slide 1: Here is a utility function that generates a list of strings, 2/day
+    * longer explaining the output strings, input/output
 * slide 1: set up code on first slide
 * slide 2: yields, if, while
 

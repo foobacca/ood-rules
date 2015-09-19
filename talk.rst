@@ -477,7 +477,22 @@ Example 2
 
 ----------
 
+Other Pearls of Wisdom
+----------------------
+
+----------
+
 .. image:: img/make-the-change-easy.png
+
+---------
+
+A little duplication is better than the wrong abstraction
+---------------------------------------------------------
+
+---------
+
+Think about objects in terms of messages and message passing
+------------------------------------------------------------
 
 ---------
 
@@ -506,7 +521,7 @@ The Rules
 
 -----
 
-github.com/foobacca/ood-rules-talk
+github.com/foobacca/ood-rules
 
 sandimetz.com
 
